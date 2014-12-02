@@ -1,5 +1,0 @@
-- [] timezone
-
-* ddd
-* dddd
-* dffdfd
