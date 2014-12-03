@@ -1,65 +1,12 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Notebox by jiuyuehe</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+---
+layout: default
+title: 我的Blog
+---
 
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/jiuyuehe/notebox">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/jiuyuehe/notebox/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/jiuyuehe/notebox/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>Notebox</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/jiuyuehe">jiuyuehe</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <hr>
-
-<p>layout: default</p>
-
-<h2>
-<a id="title-我的blog" class="anchor" href="#title-%E6%88%91%E7%9A%84blog" aria-hidden="true"><span class="octicon octicon-link"></span></a>title: 我的Blog</h2>
-
-<h2>
-<a id="-pagetitle-" class="anchor" href="#-pagetitle-" aria-hidden="true"><span class="octicon octicon-link"></span></a>{{ page.title }}</h2>
-
+<h2>{{ page.title }}</h2>
 <p>最新文章</p>
-
 <ul>
 　　{% for post in site.posts %}
-　　<li>{{ post.date | date_to_string }} <a href="%7B%7B%20site.baseurl%20%7D%7D%7B%7B%20post.url%20%7D%7D">{{ post.title }}</a>
-</li>
+　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 　　{% endfor %}
 </ul>
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
-  </body>
-</html>
