@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 稻草人 
+title: 稻草人de博客 
 ---
 
-<p>最新文章 --- </p>
+<a href="">最新文章---</a>
 <ul>
 　　{% for post in site.posts %}
 　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
